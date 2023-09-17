@@ -1,0 +1,1302 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="diagrams/workflow/">
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+    
+    
+      
+        <title>VisorCV</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.eebd395e.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-YNEVN69SC3"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-YNEVN69SC3",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-YNEVN69SC3",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#visorcv" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="VisorCV" class="md-header__button md-logo" aria-label="VisorCV" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9.5A2.5 2.5 0 0 0 9.5 12a2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 12 9.5m0 3.5a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1m0-3.5A2.5 2.5 0 0 0 9.5 12a2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 12 9.5m0 3.5a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1m0-11A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 14c-2.63 0-5-1.57-6-4a6.505 6.505 0 0 1 8.5-3.5A6.52 6.52 0 0 1 18 12c-1 2.43-3.37 4-6 4m0-6.5A2.5 2.5 0 0 0 9.5 12a2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 12 9.5m0 3.5a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VisorCV
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              VisorCV
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/VisorML/visorcv" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    VisorML/visorcv
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="VisorCV" class="md-nav__button md-logo" aria-label="VisorCV" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9.5A2.5 2.5 0 0 0 9.5 12a2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 12 9.5m0 3.5a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1m0-3.5A2.5 2.5 0 0 0 9.5 12a2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 12 9.5m0 3.5a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1m0-11A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 14c-2.63 0-5-1.57-6-4a6.505 6.505 0 0 1 8.5-3.5A6.52 6.52 0 0 1 18 12c-1 2.43-3.37 4-6 4m0-6.5A2.5 2.5 0 0 0 9.5 12a2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 12 9.5m0 3.5a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1Z"/></svg>
+
+    </a>
+    VisorCV
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/VisorML/visorcv" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    VisorML/visorcv
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          VisorCV
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        VisorCV
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-premier-computer-vision-application-framework" class="md-nav__link">
+    The premier Computer Vision Application Framework
+  </a>
+  
+    <nav class="md-nav" aria-label="The premier Computer Vision Application Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-visorcv" class="md-nav__link">
+    Why VisorCV?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-does-it-work" class="md-nav__link">
+    How does it work?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-it" class="md-nav__link">
+    What is it?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    Install
+  </a>
+  
+    <nav class="md-nav" aria-label="Install">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pip" class="md-nav__link">
+    Pip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-computer-vision-app" class="md-nav__link">
+    Create a computer vision app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-layout" class="md-nav__link">
+    Project layout
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrations" class="md-nav__link">
+    Integrations
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytorch" class="md-nav__link">
+    PyTorch
+  </a>
+  
+    <nav class="md-nav" aria-label="PyTorch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hugging-face" class="md-nav__link">
+    Hugging Face
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ray" class="md-nav__link">
+    Ray
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predictors" class="md-nav__link">
+    Predictors
+  </a>
+  
+    <nav class="md-nav" aria-label="Predictors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#video-consumer" class="md-nav__link">
+    Video Consumer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predictor" class="md-nav__link">
+    Predictor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultrenderer-renders-results" class="md-nav__link">
+    ResultRenderer: Renders results
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultrenderer-enqueues-video-production" class="md-nav__link">
+    ResultRenderer: Enqueues video production
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#videoproducer-produces-video-files-and-streams" class="md-nav__link">
+    VideoProducer: Produces video files and streams
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-inference-classes" class="md-nav__link">
+    Generate inference classes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-models" class="md-nav__link">
+    Updating models
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roadmap" class="md-nav__link">
+    Roadmap
+  </a>
+  
+    <nav class="md-nav" aria-label="Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optimizations" class="md-nav__link">
+    Optimizations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offlinecloud-platforms" class="md-nav__link">
+    Offline/Cloud Platforms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#platforms" class="md-nav__link">
+    Platforms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-images" class="md-nav__link">
+    Docker Images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distributed-platforms" class="md-nav__link">
+    Distributed Platforms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedded-platforms" class="md-nav__link">
+    Embedded Platforms
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Diagrams
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Diagrams
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="diagrams/workflow/" class="md-nav__link">
+        Workflow
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          User guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          User guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="user-guide/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-premier-computer-vision-application-framework" class="md-nav__link">
+    The premier Computer Vision Application Framework
+  </a>
+  
+    <nav class="md-nav" aria-label="The premier Computer Vision Application Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-visorcv" class="md-nav__link">
+    Why VisorCV?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-does-it-work" class="md-nav__link">
+    How does it work?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-it" class="md-nav__link">
+    What is it?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    Install
+  </a>
+  
+    <nav class="md-nav" aria-label="Install">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pip" class="md-nav__link">
+    Pip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-computer-vision-app" class="md-nav__link">
+    Create a computer vision app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-layout" class="md-nav__link">
+    Project layout
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrations" class="md-nav__link">
+    Integrations
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytorch" class="md-nav__link">
+    PyTorch
+  </a>
+  
+    <nav class="md-nav" aria-label="PyTorch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hugging-face" class="md-nav__link">
+    Hugging Face
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ray" class="md-nav__link">
+    Ray
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predictors" class="md-nav__link">
+    Predictors
+  </a>
+  
+    <nav class="md-nav" aria-label="Predictors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#video-consumer" class="md-nav__link">
+    Video Consumer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predictor" class="md-nav__link">
+    Predictor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultrenderer-renders-results" class="md-nav__link">
+    ResultRenderer: Renders results
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultrenderer-enqueues-video-production" class="md-nav__link">
+    ResultRenderer: Enqueues video production
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#videoproducer-produces-video-files-and-streams" class="md-nav__link">
+    VideoProducer: Produces video files and streams
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-inference-classes" class="md-nav__link">
+    Generate inference classes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-models" class="md-nav__link">
+    Updating models
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roadmap" class="md-nav__link">
+    Roadmap
+  </a>
+  
+    <nav class="md-nav" aria-label="Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optimizations" class="md-nav__link">
+    Optimizations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offlinecloud-platforms" class="md-nav__link">
+    Offline/Cloud Platforms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#platforms" class="md-nav__link">
+    Platforms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-images" class="md-nav__link">
+    Docker Images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distributed-platforms" class="md-nav__link">
+    Distributed Platforms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedded-platforms" class="md-nav__link">
+    Embedded Platforms
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="visorcv">VisorCV</h1>
+<h2 id="the-premier-computer-vision-application-framework">The premier Computer Vision Application Framework</h2>
+<h3 id="why-visorcv">Why VisorCV?</h3>
+<p>Building real-time computer vision applications presents a common set of challenges for developers. This framework is designed to handle the common tasks and let you focus on building your product.</p>
+<h3 id="how-does-it-work">How does it work?</h3>
+<p>Just like a web application framework abstracts away the common HTTP implementation, VisorCV provides the core set of APIs required to build your computer vision app. All with best practices and high performance in mind so you don't have to worry about dropping frames or lagging behind. Just focus on your computer vision algorithms and busines logic and let VisorCV handle the rest.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.72 17.91V6.5l-.53-.49L9.05 18.52l-1.29-.06L24 1.53l-.33-.95-11.93 1-5.75 6.6v-.23l4.7-5.39-1.38-.77-9.11.77v2.85l1.91.46v.01l.19-.01-.56.66v10.6c.609-.126 1.22-.241 1.83-.36L14.12 5.22l.83-.04L0 21.44l9.67.82 1.35-.77 6.82-6.74v2.15l-5.72 5.57 11.26.95.35-.94v-3.16l-3.29-.18a64.66 64.66 0 0 0 1.28-1.23z"/></svg></span>
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.091 14.055c-.029-.586.226-1.949.811-1.82.25.055.181.399.1.77-.11.502-.3 1.049-.3 1.049s.714.028.7 0c.071-.9.26-1.878.785-1.805.435.061-.124 1.805-.124 1.805h.65c-.023-.296.136-.985.226-1.483.09-.498-.101-.716-.502-.72s-.798.347-.798.347c.016-.3-.38-.347-.38-.347-.421-.027-.826.257-.826.257l.038-.22h-.636s-.032.35-.16.99c-.129.638-.3 1.176-.3 1.176h.716zm4.354-2.22c-.87 0-1.259.614-1.259 1.242s.371 1.042 1.128 1.042c.355 0 .556-.328.556-.328s.012-.09-.055-.053c-.067.038-.25.116-.49.116s-.497-.227-.497-.791h1.37c.072-.229.118-1.229-.753-1.229zm.127.974h-.665c0-.46.368-.806.618-.683.228.106.047.683.047.683zm-8.306-.975c-.871 0-1.26.615-1.26 1.243s.372 1.042 1.128 1.042c.356 0 .557-.328.557-.328s.012-.09-.056-.053c-.067.038-.25.116-.489.116s-.497-.227-.497-.791h1.37c.072-.229.118-1.229-.753-1.229zm.127.975h-.665c0-.46.31-.757.56-.634.228.106.105.634.105.634zm9.623 1.28h-.703s.41-1.472.446-2.194c-.006.006.609 0 .609 0s-.053.163-.076.305c.174-.193.233-.366.705-.366.006 0 0 .609 0 .609s-.44-.11-.6.049c-.158.158-.328.285-.381 1.597zm-12.12 0h-.702s.41-1.472.446-2.194c-.006.006.609 0 .609 0s-.053.163-.076.305c.174-.193.233-.366.705-.366.006 0 0 .609 0 .609s-.44-.11-.6.049c-.158.158-.328.285-.382 1.597zm-.856-2.95-.574.198-.132.535h-.366v.352h.289s-.308 1.103-.25 1.44c.057.366.414.443.626.433s.27-.164.26-.221-.299.055-.328-.205c-.02-.154.24-1.447.24-1.447h.454v-.352h-.357l.138-.734zm5.985 2.916c.085-.07.028-.21-.045-.228-.084-.172.173-1.178.173-1.454s-.462-.828-1.416-.308c-.092.059-.058.155-.036.187s.066.053.086.032c.09-.098.48-.2.663-.007.125.115.12.339.033.425-.106.01-1.15-.02-1.276.644-.216 1.18 1.107.558 1.175.51s.06.14.172.219c.301.026.412.03.471-.02zm-.66-.493c-.107.282-.505.24-.528.04-.086-.668.603-.618.603-.618s.032.296-.075.578zm-6.948-1.04.2-.337s-.163-.347-.644-.347-.758.347-.758.758.915.721.694 1.128c-.37.379-.76-.24-.753-.28-.028.04-.219.304-.21.304.047.092.214.385.75.392.444.005.712-.324.72-.73.01-.546-.785-.823-.794-1.072-.01-.25.527-.537.795.184zm-1.048-.803c-.085-.08-.15.027-.342.107-.193.08-.257.07-.45.043-.316-.07-.871-.049-1.017.022-.975.391-.452 1.116-.293 1.26-.001 0-.238.125-.272.32-.044.251.071.387.075.39-.319.017-.524.338-.474.6.053.283.39.508.872.51 1.02.022 1.072-.63 1.072-.63.14-.793-.533-.83-1.012-.792-.173-.155-.038-.3-.045-.3 1.619.039 1.211-1.041 1.211-1.041.273-.067.81-.36.675-.489zm-2.168 2.272c.634.114.89-.031.933.292.018.316-.25.406-.561.425-.311.02-.538-.138-.551-.34-.012-.203.164-.182.179-.377zm.98-1.38c-.06.26-.239.44-.402.404-.163-.037-.248-.277-.19-.537.06-.26.239-.44.402-.403.163.037.248.277.19.537zM4.037 9.475c-.464 0-1.142-.378-1.802-.378s-1.055.378-1.124.43c-.069.05-.112.248.094.188.206-.06.378-.06.704-.06s1.107.446 1.896.446 1.45-.609 1.596-.823c.145-.215.008-.284-.103-.232-.112.051-.832.429-1.261.429zm2.012 1.175c-.487 0-1.199-.377-1.893-.377s-1.108.377-1.18.429c-.073.051-.118.248.099.188.216-.06.396-.06.739-.06.342 0 1.162.446 1.992.446s1.523-.609 1.676-.823c.153-.215.009-.283-.108-.232s-.874.43-1.325.43zm-2.8 1.297c-.506 0-1.244-.408-1.964-.408s-1.15.408-1.224.464-.122.268.103.203c.224-.065.41-.065.766-.065s1.206.482 2.066.482c.86 0 1.58-.658 1.738-.89.16-.23.01-.305-.112-.25-.121.056-.906.464-1.374.464z"/></svg></span>
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.948 8.798v-1.43a6.7 6.7 0 0 1 .424-.018c3.922-.124 6.493 3.374 6.493 3.374s-2.774 3.851-5.75 3.851a3.67 3.67 0 0 1-1.158-.185v-4.346c1.528.185 1.837.857 2.747 2.385l2.04-1.714s-1.492-1.952-4-1.952a6.016 6.016 0 0 0-.796.035m0-4.735v2.138l.424-.027c5.45-.185 9.01 4.47 9.01 4.47s-4.08 4.964-8.33 4.964a6.46 6.46 0 0 1-1.095-.097v1.325c.3.035.61.062.91.062 3.957 0 6.82-2.023 9.593-4.408.459.371 2.34 1.263 2.73 1.652-2.633 2.208-8.772 3.984-12.253 3.984-.335 0-.653-.018-.971-.053v1.864H24V4.063zm0 10.326v1.131c-3.657-.654-4.673-4.46-4.673-4.46s1.758-1.944 4.673-2.262v1.237H8.94c-1.528-.186-2.73 1.245-2.73 1.245s.68 2.412 2.739 3.11M2.456 10.9s2.164-3.197 6.5-3.533V6.201C4.153 6.59 0 10.653 0 10.653s2.35 6.802 8.948 7.42v-1.237c-4.84-.6-6.492-5.936-6.492-5.936z"/></svg></span>
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.032 11.296c-.05 0-.1 0-.15.013L18.86 3.87a.968.968 0 0 0-1.558-1.118L9.286 1.156a.968.968 0 0 0-.968-.854.976.976 0 0 0-.967.967.93.93 0 0 0 .113.453L1.219 10.68a.81.81 0 0 0-.251-.038.968.968 0 0 0 0 1.935h.037l3.368 8.33a1.1 1.1 0 0 0-.088.403.968.968 0 0 0 1.671.666l10.115.993c.1.427.49.728.943.728.54 0 .967-.44.967-.967a.984.984 0 0 0-.226-.628l5.114-8.872c.05.013.1.013.164.013.54 0 .967-.44.967-.968a.97.97 0 0 0-.967-.98zm-5.805-7.275a.98.98 0 0 0 .453.327L16.147 15.92c-.1.025-.189.05-.277.1L7.451 8.708a.812.812 0 0 0 .038-.251c0-.063-.013-.126-.013-.189zm4.876 8.507-5.177 3.556a1.105 1.105 0 0 0-.126-.075l1.546-11.674h.012l3.946 7.288a.961.961 0 0 0-.201.905zM6.383 7.502a.983.983 0 0 0-.83.955v.062l-3.455 2.048 5.378-7.702zm.352 1.91a.904.904 0 0 0 .352-.164l8.356 7.263a1.09 1.09 0 0 0-.063.352v.05l-9.31 3.845a.966.966 0 0 0-.604-.402zm8.896 8.117a.922.922 0 0 0 .503.289l.465 4.046a1.05 1.05 0 0 0-.452.452l-9.814-.955zm1.144.213a.964.964 0 0 0 .54-.867.871.871 0 0 0-.038-.25l4.738-3.255-4.8 8.33zm.251-14.35-9.889 4.31-.113-.075 1.257-5.39h.037c.34 0 .641-.176.817-.44l7.891 1.57zM1.935 11.612c0-.063-.013-.126-.013-.189l3.908-2.3c.076.076.164.151.264.202L4.825 20.242l-3.204-7.904c.188-.176.314-.44.314-.728Z"/></svg></span>
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.9.853a5.73 5.73 0 0 0-2.91 10.665l1.641-2.785a.154.154 0 0 0-.05-.204 2.35 2.35 0 1 1 2.635 0 .154.154 0 0 0-.049.204l1.642 2.785A5.73 5.73 0 0 0 11.899.852zM5.73 11.689a5.73 5.73 0 1 0 0 11.458c3.179 0 5.807-2.699 5.727-5.876H8.23a.155.155 0 0 0-.152.157c-.008 1.266-1.064 2.34-2.35 2.34a2.35 2.35 0 1 1 .955-4.498.154.154 0 0 0 .196-.06l1.646-2.793a5.705 5.705 0 0 0-2.797-.728zm15.442.761-1.637 2.788a.154.154 0 0 0 .05.205 2.35 2.35 0 0 1-1.31 4.3 2.35 2.35 0 0 1-1.325-4.295.154.154 0 0 0 .049-.205l-1.646-2.782a5.73 5.73 0 1 0 5.82-.01z"/></svg></span>
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.25.18.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/></svg></span>
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.005 0 4.952 7.053a9.865 9.865 0 0 0 0 14.022 9.866 9.866 0 0 0 14.022 0c3.984-3.9 3.986-10.205.085-14.023l-1.744 1.743c2.904 2.905 2.904 7.634 0 10.538s-7.634 2.904-10.538 0-2.904-7.634 0-10.538l4.647-4.646.582-.665zm3.568 3.899a1.327 1.327 0 0 0-1.327 1.327 1.327 1.327 0 0 0 1.327 1.328A1.327 1.327 0 0 0 16.9 5.226 1.327 1.327 0 0 0 15.573 3.9z"/></svg></span>
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.895 10.896-.172-.303c.007-2.174-1.002-3.06-2.179-3.734.356-.094.724-.172.825-.619.611-.156.74-.44.8-.74.16-.106.696-.406.64-.92.3-.207.467-.473.382-.85.322-.35.407-.641.27-.909.387-.48.215-.73.05-.982.29-.525.034-1.088-.776-.994-.322-.473-1.024-.366-1.133-.364-.121-.152-.281-.282-.775-.219-.32-.285-.677-.236-1.046-.096-.438-.34-.727-.068-1.058.036-.53-.171-.652.063-.912.158-.578-.12-.754.141-1.03.418l-.323-.006c-.872.506-1.305 1.536-1.459 2.066-.153-.53-.586-1.56-1.457-2.066l-.323.006C9.942.501 9.766.239 9.19.36 8.927.265 8.806.03 8.276.202 8.059.134 7.86-.007 7.624 0a.687.687 0 0 0-.405.166c-.37-.14-.727-.189-1.046.096-.494-.063-.654.068-.776.22-.108-.003-.81-.11-1.133.363-.81-.094-1.065.47-.776.994-.165.252-.336.502.05.982-.136.268-.051.558.27.91-.084.376.083.642.383.849-.056.515.48.814.639.92.061.3.19.584.801.74.1.448.469.525.825.619-1.177.673-2.186 1.56-2.18 3.735l-.172.302c-1.349.809-2.562 3.406-.664 5.517.124.661.332 1.136.517 1.661.277 2.117 2.084 3.108 2.56 3.225.699.525 1.443 1.022 2.45 1.37.948.964 1.976 1.331 3.01 1.33h.046c1.034.002 2.062-.366 3.01-1.33 1.007-.348 1.751-.846 2.45-1.37.476-.117 2.284-1.108 2.56-3.225.186-.525.394-1 .517-1.66 1.899-2.112.685-4.71-.664-5.518zm-1.038-.371c-.07.876-4.635-3.05-3.847-3.181 2.139-.356 3.919.896 3.847 3.18zM16.84 14.89c-1.148.74-2.802.262-3.695-1.069-.893-1.33-.686-3.01.462-3.75 1.149-.741 2.803-.263 3.696 1.068.892 1.33.686 3.01-.463 3.75zM13.66 1.372c.04.197.084.321.135.358.254-.272.462-.55.788-.813.001.154-.077.321.117.443a2.3 2.3 0 0 1 .727-.624c-.152.26-.026.34.055.448.24-.206.468-.414.91-.576-.12.148-.29.292-.11.461.247-.154.496-.309 1.083-.418-.132.147-.406.295-.24.442.31-.118.654-.204 1.034-.254-.182.15-.334.296-.184.412.332-.102.79-.24 1.237-.121l-.283.285c-.032.038.662.03 1.12.036-.167.232-.338.456-.437.855.045.046.272.02.486 0-.22.462-.6.578-.69.776.135.101.32.075.524.006-.158.325-.49.548-.751.812.066.047.182.075.456.043a4.202 4.202 0 0 1-.88.703c.06.07.272.068.467.072-.313.307-.717.466-1.095.667.188.13.323.1.467.097-.267.22-.722.335-1.144.467.08.125.16.159.332.194-.447.247-1.087.134-1.268.26.044.125.167.206.314.274-.72.041-2.688-.027-3.065-1.516.737-.81 2.081-1.76 4.394-2.934-1.8.602-3.423 1.405-4.782 2.51-1.598-.744-.496-2.62.283-3.365zm-1.613 5.372c1.133-.012 2.536.832 2.53 1.629-.005.702-.985 1.271-2.52 1.26-1.505-.017-2.518-.715-2.514-1.395.002-.56 1.228-1.527 2.504-1.494zm-5.764-.6c.172-.036.252-.07.332-.195-.422-.132-.877-.247-1.145-.466.145.001.28.031.468-.097-.378-.201-.782-.36-1.095-.667.195-.005.406-.002.467-.073a4.208 4.208 0 0 1-.88-.703c.274.032.39.004.456-.043-.262-.264-.593-.487-.751-.812.203.069.389.095.523-.006-.089-.198-.47-.314-.69-.776.215.02.442.046.487 0-.1-.399-.27-.623-.437-.855.458-.007 1.152.002 1.12-.036l-.283-.285c.447-.119.905.019 1.237.121.15-.116-.002-.263-.184-.412.38.05.723.136 1.034.254.165-.147-.108-.295-.24-.442.587.11.836.264 1.083.418.18-.17.01-.313-.111-.46.443.161.67.37.911.575.081-.108.207-.187.055-.448.315.178.552.389.727.624.194-.122.116-.289.117-.442.326.261.534.54.788.812.05-.037.095-.161.135-.358.78.745 1.88 2.621.283 3.365C9.33 3.633 7.707 2.83 5.909 2.228c2.312 1.174 3.656 2.124 4.392 2.933-.377 1.49-2.345 1.558-3.065 1.516.147-.068.27-.149.314-.273-.18-.126-.821-.013-1.268-.26zm2.817 1.133c.788.13-3.777 4.056-3.847 3.18C5.18 8.174 6.96 6.922 9.1 7.278zm-4.847 8.756c-1.109-.879-1.466-3.453.59-4.61 1.24-.327.419 5.052-.59 4.61zm4.266 4.6c-.626.371-2.145.218-3.225-1.31-.729-1.282-.635-2.587-.123-2.97.765-.46 1.946.16 2.856 1.2.792.94 1.153 2.592.492 3.08zm-1.242-5.61c-1.148-.74-1.355-2.42-.462-3.75.893-1.331 2.547-1.81 3.695-1.068 1.148.74 1.355 2.42.463 3.75-.893 1.331-2.547 1.81-3.695 1.069zm4.795 8.229c-1.376.058-2.726-1.11-2.708-1.516-.02-.594 1.676-1.058 2.782-1.03 1.113-.049 2.607.352 2.61.884.018.517-1.355 1.684-2.684 1.662zm2.759-5.858c.008 1.39-1.226 2.522-2.757 2.53-1.53.007-2.777-1.114-2.785-2.504v-.026c-.008-1.39 1.226-2.523 2.756-2.53 1.53-.007 2.778 1.113 2.786 2.503a.78.78 0 0 1 0 .027zm3.855 2.003c-1.186 1.62-2.792 1.684-3.39 1.232-.625-.58-.148-2.385.71-3.374.98-1.092 2.03-1.804 2.76-1.248.492.483.78 2.301-.08 3.39zm1.072-3.43c-1.009.44-1.83-4.938-.59-4.61 2.057 1.157 1.7 3.73.59 4.61zm-.026-8.328h.299v-.53h.299c.15 0 .205.062.226.205.015.108.011.239.048.325h.298c-.053-.076-.052-.236-.057-.321-.01-.138-.051-.28-.198-.318v-.004c.15-.06.215-.18.215-.34 0-.206-.154-.375-.397-.375h-.732V7.64zm.299-1.126h.327c.133 0 .205.058.205.188 0 .137-.072.194-.205.194h-.327v-.382zm-1.034.464a1.27 1.27 0 1 0 2.54 0 1.27 1.27 0 0 0-2.54 0zm2.328 0a1.058 1.058 0 1 1-2.116 0 1.058 1.058 0 0 1 2.116 0z"/></svg></span>
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.153 12.826c-.63-.183-1.03.15-1.378.846-.58 1.13-1.643 1.644-2.888 1.594-1.245-.05-2.257-.63-2.788-1.776-.233-.498-.498-.664-1.046-.68-.93-.017-1.643.016-2.174 1.062-.631 1.261-2.258 1.693-3.619 1.261a3.234 3.234 0 0 1-2.257-3.22 3.198 3.198 0 0 1 2.29-3.02 3.276 3.276 0 0 1 3.702 1.327c.216.315.216.863.597.93.648.1 1.328.033 1.992.033.299 0 .316-.266.399-.465.58-1.295 1.61-1.959 2.987-1.975 1.361-.017 2.39.647 2.955 1.892.215.465.48.598.946.548.166-.017.332.016.498 0 .464-.083 1.062.282 1.344-.448.282-.73-.382-.913-.68-1.245-.847-.946-1.81-1.793-2.673-2.706-.415-.465-.763-.614-1.41-.415-1.876.614-3.619-.431-4.15-2.357-.448-1.676.714-3.535 2.44-3.917a3.293 3.293 0 0 1 3.95 2.457c.017.05.017.083.033.133.117.564.117 1.145-.132 1.626-.283.531-.133.83.249 1.195a152.61 152.61 0 0 1 3.286 3.27c.299.299.498.349.913.2 1.51-.565 2.97-.1 3.884 1.161a3.266 3.266 0 0 1-.067 3.801c-.896 1.195-2.357 1.643-3.834 1.079-.381-.15-.58-.1-.846.182a163.619 163.619 0 0 1-3.403 3.386c-.299.3-.415.532-.232.98a3.198 3.198 0 0 1-1.278 3.917A3.298 3.298 0 0 1 9.646 23c-1.062-1.062-1.228-2.688-.415-4.033a3.196 3.196 0 0 1 3.835-1.294c.498.182.78.083 1.145-.283 1.012-1.045 2.058-2.058 3.087-3.103.266-.266.68-.449.432-1.03-.233-.547-.631-.414-1.03-.431zM11.97 4.942c.913.016 1.643-.714 1.66-1.627v-.05a1.646 1.646 0 0 0-1.76-1.56 1.63 1.63 0 0 0-1.543 1.527 1.638 1.638 0 0 0 1.577 1.71zm.033 5.41a1.658 1.658 0 0 0-1.676 1.61v.084a1.73 1.73 0 0 0 1.643 1.66c.847.016 1.643-.78 1.677-1.627a1.648 1.648 0 0 0-1.577-1.71c-.017-.016-.05-.016-.067-.016zm7.088 1.694c.016.896.747 1.61 1.626 1.643a1.723 1.723 0 0 0 1.66-1.726 1.666 1.666 0 0 0-1.66-1.61 1.623 1.623 0 0 0-1.643 1.577c.017.05.017.083.017.116zM3.24 10.353a1.692 1.692 0 0 0-1.66 1.626c-.017.847.863 1.727 1.693 1.71a1.687 1.687 0 0 0 1.626-1.743 1.615 1.615 0 0 0-1.643-1.593Zm8.68 12c.98.033 1.71-.647 1.727-1.593a1.646 1.646 0 0 0-1.51-1.793 1.646 1.646 0 0 0-1.793 1.51v.233a1.609 1.609 0 0 0 1.543 1.66c0-.017.017-.017.033-.017z"/></svg></span>
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10.5 2.661.54.997-1.797.644 2.409.218.748 1.246.467-1.121 2.077-.208-1.61-.613.426-1.017-1.578.519zm6.905 2.077L13.76 6.182l3.292 1.298.353-.146 3.293-1.298zm-10.51.312a2.97 1.153 0 0 0-2.97 1.152 2.97 1.153 0 0 0 2.97 1.153 2.97 1.153 0 0 0 2.97-1.153 2.97 1.153 0 0 0-2.97-1.152zM24 6.805s-8.983 4.278-10.395 4.953c-1.226.561-1.901.561-3.261.094C8.318 11.022 0 7.241 0 7.241v1.038c0 .24.332.499.966.8 1.277.613 8.34 3.677 9.45 4.206 1.112.53 1.9.54 3.313-.197 1.412-.738 8.049-3.905 9.326-4.57.654-.342.945-.602.945-.84zm-10.042.602L8.39 8.26l3.884 1.61zM24 10.637s-8.983 4.279-10.395 4.954c-1.226.56-1.901.56-3.261.093C8.318 14.854 0 11.074 0 11.074v1.038c0 .238.332.498.966.8 1.277.612 8.34 3.676 9.45 4.205 1.112.53 1.9.54 3.313-.197 1.412-.737 8.049-3.905 9.326-4.57.654-.332.945-.602.945-.84zm0 3.842-10.395 4.954c-1.226.56-1.901.56-3.261.094C8.318 18.696 0 14.916 0 14.916v1.038c0 .239.332.499.966.8 1.277.613 8.34 3.676 9.45 4.206 1.112.53 1.9.54 3.313-.198 1.412-.737 8.049-3.904 9.326-4.569.654-.343.945-.613.945-.841z"/></svg></span>
+<img alt="🤗" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f917.svg" title=":hugging:" /></p>
+<h3 id="what-is-it">What is it?</h3>
+<p>VisorCV provides the best developer experience to develop any computer vision application. Building on top of the leading computer vision (<a href="https://opencv.org/">OpenCV</a>) and machine learning (<a href="https://pytorch.org/">PyTorch</a>) libraries, supporting a number of runtimes (<a href="https://onnxruntime.ai/docs/execution-providers/">ONNXRuntime</a>, <a href="https://huggingface.co/models?sort=trending&amp;search=onnx">Hugging Face</a>), and pretrained/custom models (<a href="https://github.com/ultralytics/ultralytics">YOLOv8</a>, <a href="https://github.com/facebookresearch/detectron2">Detectron2</a>) all with scalable deployment in mind (<a href="https://www.docker.com/">Docker</a>). VisorCV will get your product ready for production in no time.</p>
+<h2 id="install">Install</h2>
+<h3 id="pip">Pip</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip install visorcv
+</span></code></pre></div>
+<h3 id="docker">Docker</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker pull visorml/visorcv:latest
+</span></code></pre></div>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="create-a-computer-vision-app">Create a computer vision app</h3>
+<p>Create a new computer vision application named <code>cv-project</code>.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>visorcv new cv-project
+</span></code></pre></div></p>
+<h3 id="project-layout">Project layout</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>project-name/
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>├─ app/
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>│  ├─ consumers/
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>│  │   └─ camera_stream.py
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>│  ├─ models/
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>│  │  └─ yolov8n.onnx
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>│  ├─ predictors/
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>│  │  └─ yolo_detector.py
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>│  └─ views/
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>│     └─ blurred_faces.py
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>├─ config/
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>│  ├─ cameras.yml
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>│  └─ mkdocs.yml
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>├─ tests/
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>│  ├─ consumers
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>│  └─ mkdocs.yml
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>└─ requirements.txt
+</span></code></pre></div>
+<h2 id="features">Features</h2>
+<ul>
+<li>Readers <ul>
+<li>VideoReader</li>
+</ul>
+</li>
+<li>Writers (Producer since it produces files/RTSP streams? But it consumes from frame streams...)<ul>
+<li>FileWriter()</li>
+<li>StreamWriter(Broadcaster)</li>
+</ul>
+</li>
+<li><a href="#predictors">Predictors</a><ul>
+<li>Detector</li>
+<li>Segmentor</li>
+<li>Classifier</li>
+<li>Tracker</li>
+</ul>
+</li>
+<li>Results<ul>
+<li>Detection</li>
+<li>Segementation</li>
+<li>Classification</li>
+<li>Tracklet</li>
+</ul>
+</li>
+<li>Annotators(Views?)<ul>
+<li>Box</li>
+<li>Mask</li>
+<li>Label</li>
+<li>Blur</li>
+</ul>
+</li>
+<li>Model</li>
+<li>Transformer</li>
+</ul>
+<h2 id="integrations">Integrations</h2>
+<h3 id="pytorch">PyTorch</h3>
+<h4 id="_1"></h4>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a> <span class="n">model</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">hub</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;ultralytics/yolov5&#39;</span><span class="p">,</span> <span class="s1">&#39;yolov5s&#39;</span><span class="p">,</span> <span class="n">pretrained</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># (1)</span>
+</span></code></pre></div>
+<ol>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> I'm a code annotation! I can contain <code>code</code>, <strong>formatted
+    text</strong>, images, ... basically anything that can be written in Markdown.</li>
+</ol>
+<h3 id="hugging-face">Hugging Face</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>from huggingface_hub import hf_hub_download
+</span></code></pre></div>
+<h3 id="ray">Ray</h3>
+<h2 id="predictors">Predictors</h2>
+<p>Predictors are inference classes that take <code>image_data</code> and output disignated <code>results</code> that can be annotated based on the <code>result</code>
+- YOLOv8
+- Custom ONNX or PyTorch Models</p>
+<h3 id="video-consumer">Video Consumer</h3>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    Video Stream --&gt;&gt; Video Consumer: Read Frames
+    Video Consumer --&gt;&gt; Ray Frame Buffer: Write Frames to Buffer
+    Video Consumer --&gt;&gt; Faktory: Equeue Predictor job by frame id</code></pre>
+<h3 id="predictor">Predictor</h3>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    Faktory --&gt;&gt; Predictor: Dequeue Predictor jobs
+    Ray Frame Buffer --&gt;&gt; Predictor: Read Frames from Buffer
+    Predictor --&gt;&gt; Redis: Write Results to Redis
+    Predictor --&gt;&gt; Faktory: Enqueue render job to faktory</code></pre>
+<h3 id="resultrenderer-renders-results">ResultRenderer: Renders results</h3>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    Faktory --&gt;&gt; Result Renderer: Dequeue render job
+    Redis --&gt;&gt; Result Renderer: Read results from redis
+    Ray Frame Buffer --&gt;&gt; Result Renderer: Read frame from buffer
+    Note over Result Renderer: render results to frame</code></pre>
+<h3 id="resultrenderer-enqueues-video-production">ResultRenderer: Enqueues video production</h3>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    Ray Frame Buffer --&gt;&gt; Result Renderer: Write rendered frame to Buffer
+    Result Renderer --&gt;&gt; Redis: Write Results to Redis
+    Result Renderer --&gt;&gt; Faktory: Enqueue video production job to faktory</code></pre>
+<h3 id="videoproducer-produces-video-files-and-streams">VideoProducer: Produces video files and streams</h3>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    Faktory --&gt;&gt; Video Producer: Dequeue video production job
+    Redis --&gt;&gt; Video Producer: Read results from redis
+    Video Producer --&gt;&gt; Video: write frame to File/RTSP</code></pre>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    vp --&gt;&gt; API: report results to API
+    HTTP --&gt;&gt; User: User requests live feed
+    RTSP --&gt;&gt; User: Watches live feed</code></pre>
+<pre class="mermaid"><code>sequenceDiagram
+    participant vs as Video File/Stream
+    participant vc as Video Consumer
+    destroy vs
+    vs -&gt;&gt;+ vc: Read Frames
+    participant rfb as Ray Frame Buffer
+    vc -&gt;&gt;+ rfb: Write Frames to Buffer
+    create participant f as Fraktory
+    vc -)- f: Equeue Predictor job by frame id
+    create participant ap as Async Predictor
+    f -&gt;&gt;+ ap: Dequeue Predictor jobs
+    rfb -&gt;&gt;+ ap: Read Frames from Buffer
+    Note over ap: Run inference
+    create participant r as Redis
+    ap -&gt;&gt;- r: Write Results to Redis
+    destroy ap
+    ap -) f: Enqueue render job to faktory
+    create participant vp as Video Producer
+    f -) vp: Dequeue render job
+    r -&gt;&gt; vp: Read results from redis
+    rfb -&gt;&gt; vp: Read frame from buffer
+    create participant RTSP
+    vp -&gt;&gt; RTSP: write frame to RTSP
+    create participant File
+    vp -&gt;&gt; File: write frame to file
+    create participant API
+    vp -&gt;&gt; API: report results to API
+    create actor User
+    HTTP -&gt;&gt; User: User requests live feed
+    RTSP -&gt;&gt; User: Watches live feed</code></pre>
+<h3 id="generate-inference-classes">Generate inference classes</h3>
+<p>These generators will create the appropriate python code and download the supporting models.</p>
+<p>Generate a Detector from an off the shelf model
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>visorcv generate detector --model=yolov8
+</span></code></pre></div>
+Generate a detector for a customer model
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>visorcv generate detector --model=path/to/your/model.onnx
+</span></code></pre></div>
+Generate a Segmentor from an off the shelf model
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>visorcv generate segmentor --model=yolov8
+</span></code></pre></div>
+Generate a Classifier from an off the shelf model
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>visorcv generate classifier --model=yolov8
+</span></code></pre></div></p>
+<p><strong>Supported Models</strong></p>
+<ul>
+<li>PyTorch</li>
+<li>ONNXRuntime<ul>
+<li>CoreML models</li>
+<li>TensorRT models</li>
+</ul>
+</li>
+</ul>
+<p>Generate a Tracker from an off the shelf model
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>visorcv generate tracker --model=bytetracker --config=botsort.yaml
+</span></code></pre></div></p>
+<p><strong>Supported Trackers</strong>
+  - <a href="https://github.com/NirAharon/BoT-SORT">BoT-SORT</a> - Use botsort.yaml to enable this tracker.
+  - <a href="https://github.com/ifzhang/ByteTrack">ByteTrack</a> - Use bytetrack.yaml to enable this tracker.</p>
+<h3 id="updating-models">Updating models</h3>
+<h2 id="roadmap">Roadmap</h2>
+<h3 id="optimizations">Optimizations</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> BetterTransformer for multiGPU inference?</li>
+</ul>
+<h3 id="offlinecloud-platforms">Offline/Cloud Platforms</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Metaflow?</li>
+</ul>
+<h3 id="platforms">Platforms</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> MacOS Apple Silicon Support with <a href="https://github.com/apple/coremltools">CoreMLTools</a></li>
+</ul>
+<h3 id="docker-images">Docker Images</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> NVIDIA GPU support with CUDA, CuDNN, PyTorch, and ONNXRuntime</li>
+</ul>
+<h3 id="distributed-platforms">Distributed Platforms</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Ray Object Store</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Docker Swarm</li>
+</ul>
+<h3 id="embedded-platforms">Embedded Platforms</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Raspberry Pi support <ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Disk image</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Docker image</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Reading from Pi Cam</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Streaming via RTSP</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Jetson support<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Disk image</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Docker image</li>
+</ul>
+</li>
+</ul>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/VisorML/visorcv" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://hub.docker.com/u/visorml" target="_blank" rel="noopener" title="hub.docker.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.gg/" target="_blank" rel="noopener" title="discord.gg" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/visorml" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/visorml" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://dev.to/visorml" target="_blank" rel="noopener" title="dev.to" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M120.12 208.29c-3.88-2.9-7.77-4.35-11.65-4.35H91.03v104.47h17.45c3.88 0 7.77-1.45 11.65-4.35 3.88-2.9 5.82-7.25 5.82-13.06v-69.65c-.01-5.8-1.96-10.16-5.83-13.06zM404.1 32H43.9C19.7 32 .06 51.59 0 75.8v360.4C.06 460.41 19.7 480 43.9 480h360.2c24.21 0 43.84-19.59 43.9-43.8V75.8c-.06-24.21-19.7-43.8-43.9-43.8zM154.2 291.19c0 18.81-11.61 47.31-48.36 47.25h-46.4V172.98h47.38c35.44 0 47.36 28.46 47.37 47.28l.01 70.93zm100.68-88.66H201.6v38.42h32.57v29.57H201.6v38.41h53.29v29.57h-62.18c-11.16.29-20.44-8.53-20.72-19.69V193.7c-.27-11.15 8.56-20.41 19.71-20.69h63.19l-.01 29.52zm103.64 115.29c-13.2 30.75-36.85 24.63-47.44 0l-38.53-144.8h32.57l29.71 113.72 29.57-113.72h32.58l-38.46 144.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://medium.com/@visorml" target="_blank" rel="noopener" title="medium.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M180.5 74.262C80.813 74.262 0 155.633 0 256s80.819 181.738 180.5 181.738S361 356.373 361 256 280.191 74.262 180.5 74.262Zm288.25 10.646c-49.845 0-90.245 76.619-90.245 171.095s40.406 171.1 90.251 171.1 90.251-76.619 90.251-171.1H559c0-94.503-40.4-171.095-90.248-171.095Zm139.506 17.821c-17.526 0-31.735 68.628-31.735 153.274s14.2 153.274 31.735 153.274S640 340.631 640 256c0-84.649-14.215-153.271-31.742-153.271Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://visorml.com" target="_blank" rel="noopener" title="visorml.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64h185.4c2.2 20.4 3.3 41.8 3.3 64zm28.8-64h123.1c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6 78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7 10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5 11.6 26 20.9 58.2 27 94.7zm-209 0H18.6c30-74.1 93.6-130.9 172-151.6-25.5 34.2-45.3 87.7-55.3 151.6zM8.1 192h123.1c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zm186.6 254.6c-11.6-26-20.9-58.2-27-94.6h176.6c-6.1 36.4-15.5 68.6-27 94.6-10.5 23.6-22.2 40.7-33.5 51.5-11.2 10.7-20.5 13.9-27.8 13.9s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6-78.4-20.7-142-77.5-172-151.6h116.7zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6 25.5-34.2 45.2-87.7 55.3-151.6h116.6z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.annotate", "content.code.copy", "content.code.select"], "search": "assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,54 @@
+site_name: VisorCV
+repo_name: VisorML/visorcv
+repo_url: https://github.com/VisorML/visorcv
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+    logo: material/eye-circle
+    favicon: material/eye
+  palette:
+    primary: teal
+  features:
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+markdown_extensions:
+  - pymdownx.highlight:
+      use_pygments: true
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+extra:
+  analytics:
+    provider: google
+    property: G-YNEVN69SC3
+  social:
+  - icon: fontawesome/brands/github
+    link: https://github.com/VisorML/visorcv
+  - icon: fontawesome/brands/docker
+    link: https://hub.docker.com/u/visorml
+  - icon: fontawesome/brands/discord
+    link: https://discord.gg/
+  - icon: fontawesome/brands/twitter
+    link: https://twitter.com/visorml
+  - icon: fontawesome/brands/linkedin
+    link: https://www.linkedin.com/in/visorml
+  - icon: fontawesome/brands/dev
+    link: https://dev.to/visorml
+  - icon: fontawesome/brands/medium
+    link: https://medium.com/@visorml
+  - icon: fontawesome/solid/globe
+    link: https://visorml.com
